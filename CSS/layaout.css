@@ -1,19 +1,19 @@
 /* 
-orden propiedades
-    propiedades del modelo de caja display margin heigt
-    posicionakiento top left right
-    tipografia 
-    decoracion 
+order properties >
+    box model properties
+    positioning 
+    typography
+    decor 
     variables
     mixins
-    */
+*/
 
 .main {
-    padding: 10px;
     height: 80vh;
-    width: 100vw;
-    
+    padding: 10px;
+    width: 100vw;   
 }
+
 .main-title {
     display: flex;
     position: relative;
@@ -24,6 +24,8 @@ orden propiedades
 
     font-family: 'Noto Serif';
     font-size: 36px;
+    font-weight: 700;
+    line-height: 39.6px;
 }
 
 .main-subtitle {
@@ -31,6 +33,9 @@ orden propiedades
     top: 12rem;
     left: 3rem;
     font-size: 24px;
+    font-weight: 400;
+    line-height: 26.4px;
+    
     
 }
 .main-content {
@@ -40,9 +45,8 @@ orden propiedades
     display: flex;
     position: relative;
     top: 14rem;
-    left: 3rem;
+    left: 2em;
 
-    font-family: 'Nunito';
     font-size: 16px;
     line-height: 110%;
 }
@@ -56,25 +60,22 @@ orden propiedades
 }
 .footer a {
     color: black;
+    font-size: 16px;
+    line-height: 17.6px;
 
 }
+
 .footer-anchor {
     margin-left: 3rem;
     margin-right: 3rem;
     color: black;
 }
 
-
-.content-list {
-    
+.content-list {    
     position: relative;
     left: 4rem;
     bottom: 27rem;
     list-style: none;
 
-    font-family: 'Nunito';
     font-size: 16px;
-}
-
-.content-list__item{
 }
