@@ -7,7 +7,6 @@ order properties >
     variables
     mixins
 */
-
 .main {
     height: 60vh;
     padding: 10px;
@@ -42,8 +41,4 @@ order properties >
 .footer-anchor {
     margin-right: 3rem;
     color: black;
-}
-
-.content-list {    
-    disp
 }

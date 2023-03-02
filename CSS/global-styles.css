@@ -17,12 +17,13 @@ html {
   font-weight: 700;
   line-height: 39.6px;
 }
+
 .main-subtitle {
   font-size: 24px;
   font-weight: 400;
   line-height: 26.4px;
-    
 }
+
 .content-list {
   list-style: none;
   font-size: 16px;
@@ -37,15 +38,4 @@ html {
   color: black;
   font-size: 16px;
   line-height: 17.6px;
-}
-
-@media (min-width:480px){
-    
-}
-
-@media (min-width:768px){
-    
-}
-@media (min-width:1024px){
-    
 }
