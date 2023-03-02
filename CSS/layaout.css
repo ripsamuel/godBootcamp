@@ -1,12 +1,3 @@
-/* 
-order properties >
-    box model properties
-    positioning 
-    typography
-    decor 
-    variables
-    mixins
-*/
 
 .main {
     height: 60vh;
@@ -42,8 +33,4 @@ order properties >
 .footer-anchor {
     margin-right: 3rem;
     color: black;
-}
-
-.content-list {    
-    disp
 }
