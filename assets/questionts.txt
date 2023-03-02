@@ -6,7 +6,7 @@ El scope de un variable tipo var es de
 Pregunta 2
 Qué hace el método `forEach()`
    Retorna ´true´o ´false´ si hay elementos en un array que cumplan con la condición indicada.
-   Ejecuta la función indicada una vez por cada elemento del array.
+    Ejecuta la función indicada una vez por cada elemento del array.
     Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array.
 Pregunta 3
 ¿Qué método debo utilizar para eliminar el último elemento de un array?
