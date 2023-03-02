@@ -1,50 +1,25 @@
-/* 
-orden propiedades
-    propiedades del modelo de caja display margin heigt
-    posicionakiento top left right
-    tipografia 
-    decoracion 
-    variables
-    mixins
-    */
-
 .main {
+    height: 60vh;
     padding: 10px;
-    height: 80vh;
-    width: 100vw;
-    
+    margin-left: 3em;  
+    margin-right: 3em;
 }
+
 .main-title {
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
- 
-    top: 8rem;
-
-    font-family: 'Noto Serif';
-    font-size: 36px;
+    margin-top: 70px;
 }
 
 .main-subtitle {
-    position: relative;
-    top: 12rem;
-    left: 3rem;
-    font-size: 24px;
-    
+    margin-top: 1em;
+    margin-bottom: 3rem;
+
 }
 .main-content {
     width: 80vw;
-    height: 60vh;
-    
-    display: flex;
-    position: relative;
-    top: 14rem;
-    left: 3rem;
-
-    font-family: 'Nunito';
-    font-size: 16px;
-    line-height: 110%;
+    height: 50vh;
 }
 
 .footer {  
@@ -52,29 +27,9 @@ orden propiedades
   position: relative;
   justify-content: center;
   align-items: center;
-  
 }
-.footer a {
-    color: black;
 
-}
 .footer-anchor {
-    margin-left: 3rem;
     margin-right: 3rem;
     color: black;
-}
-
-
-.content-list {
-    
-    position: relative;
-    left: 4rem;
-    bottom: 27rem;
-    list-style: none;
-
-    font-family: 'Nunito';
-    font-size: 16px;
-}
-
-.content-list__item{
 }
