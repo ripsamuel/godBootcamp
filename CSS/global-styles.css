@@ -7,10 +7,37 @@
     font-family: 'Nunito', sans-serif;
   }
   
-  html {
+html {
     font-size: 62.5%;
-  }
+}
 
+.main-title {
+  font-family: 'Noto Serif';
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 39.6px;
+}
+.main-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26.4px;
+    
+}
+.content-list {
+  list-style: none;
+  font-size: 16px;
+}
+
+.main-content {
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.footer a {
+  color: black;
+  font-size: 16px;
+  line-height: 17.6px;
+}
 
 @media (min-width:480px){
     
