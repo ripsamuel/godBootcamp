@@ -3,7 +3,6 @@ El scope de un variable tipo var es de
     bloque
     global
     function
-
 Pregunta 2
 Qué hace el método `forEach()`
    Retorna ´true´o ´false´ si hay elementos en un array que cumplan con la condición indicada.
