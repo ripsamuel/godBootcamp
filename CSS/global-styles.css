@@ -5,9 +5,8 @@
     padding: 0;
     background-color: white;
     font-family: 'Nunito', sans-serif;
-    
-  }
-  
+}
+
 html {
     font-size: 62.5%;
 }
@@ -22,15 +21,23 @@ html {
   font-size: 24px;
   font-weight: 400;
   line-height: 26.4px;
-    
+
 }
 .content-list {
   list-style: none;
   font-size: 16px;
 }
-.form-list {
+#form-list {
   font-size: 16px;
 }
+fieldset {
+  margin: 0px;
+  border-style: none;
+}
+legend {
+  margin-left: -4rem;
+}
+
 .main-content {
   font-size: 16px;
   line-height: 110%;

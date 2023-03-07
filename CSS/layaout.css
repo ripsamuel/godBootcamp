@@ -1,7 +1,7 @@
 
 .main {
     height: 60vh;
-    margin-left: 3em;  
+    margin-left: 3em;
     margin-right: 3em;
 }
 
@@ -22,21 +22,21 @@
     height: 50vh;
 }
 
-.footer {  
+.footer {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
   }
-  
+
   .footer a {
       margin-top: 3rem;
       margin-right: 3rem;
       color: black;
   }
-  
+
 /* FORM CSS */
-.form-list {
+#form-list {
     margin-top: 1rem;
     margin-left: 2em;
     padding: 1rem;

@@ -17,34 +17,43 @@
     <header>
         <h1 class="main-title">Titulo</h1>
     </header>
-    
-    <main class="main"> 
-        <h2 
-        class="main-subtitle" 
-        id="pregunta">  ¿ El scope de un variable tipo var es de ?
-        </h2>
-            
-        <form class="form-list"> 
-            <div class="form-item">
+    <main class="main">
+        <form id="form-list">
+        <fieldset>
+            <legend class="main-subtitle">¿ El scope de un variable tipo var es de ?</legend>
+            <p class="form-item">
                 <label >Bloque</label>
-                <input class="input-btn" type="radio" name="Query1">
-            </div>
-            <div class="form-item">
+                <input for="bloque"
+                id="responsive1"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="1">
+            </p>
+            <p class="form-item">
                 <label >Global</label>
-                <input class="input-btn" type="radio" name="Query1">
-            </div>
-            <div class="form-item">
+                <input for="global"
+                id="responsive2"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="2">
+            </p>
+            <p class="form-item">
                 <label >Function</label>
-                <input class="input-btn" type="radio" name="Query1">
-            </div>
+                <input for="Function"
+                id="responsive3"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="3">
+            </p>
+        </fieldset>
         </form>
     </main>
     <footer class="footer">
         <a href="./question-11.html">Next </a>
     </footer>
 
-    <script>
-      
-    </script>
 </body>
 </html>
