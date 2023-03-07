@@ -5,6 +5,7 @@
     padding: 0;
     background-color: white;
     font-family: 'Nunito', sans-serif;
+    
   }
   
 html {
@@ -27,7 +28,9 @@ html {
   list-style: none;
   font-size: 16px;
 }
-
+.form-list {
+  font-size: 16px;
+}
 .main-content {
   font-size: 16px;
   line-height: 110%;
@@ -37,15 +40,4 @@ html {
   color: black;
   font-size: 16px;
   line-height: 17.6px;
-}
-
-@media (min-width:480px){
-    
-}
-
-@media (min-width:768px){
-    
-}
-@media (min-width:1024px){
-    
 }
