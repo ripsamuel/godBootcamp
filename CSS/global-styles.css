@@ -1,49 +1,51 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     background-color: white;
     font-family: 'Nunito', sans-serif;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-.main-title {
+.main-title , h1{
   font-family: 'Noto Serif';
-  font-size: 36px;
+  font-size: 3.7rem;
   font-weight: 700;
   line-height: 39.6px;
 }
-.main-subtitle {
-  font-size: 24px;
+
+.main-subtitle , h2{
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 26.4px;
 
 }
-.content-list {
-  list-style: none;
-  font-size: 16px;
-}
-#form-list {
-  font-size: 16px;
-}
-fieldset {
-  margin: 0px;
-  border-style: none;
-}
-legend {
-  margin-left: -4rem;
+
+form{
+  font-size: 1.7rem;
 }
 
-.main-content {
-  font-size: 16px;
+fieldset {
+  margin: none;
+  border-style: none;
+}
+
+p {
+  font-size: 1.6rem;
   line-height: 110%;
 }
 
-.footer a {
+input {
+  accent-color: black;
+}
+
+a {
   color: black;
-  font-size: 16px;
-  line-height: 17.6px;
+  font-size: 1.6rem;
+  line-height: 1.76rem;
+
+  margin-top: 3rem;
+  margin-right: 3rem;
+  color: black;
 }
