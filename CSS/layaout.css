@@ -3,21 +3,24 @@
     min-height: 60vh;
     margin-left: 3.5em;
     margin-right: 3.5em;
+    margin-top: 5rem;
+    min-width: 50px;
 }
 
 .main-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2.1em;
+    margin-top: 2em;
 }
 
 .main-subtitle {
     margin-top: 2em;
+    padding: 0rem;
 }
 
 .main-content {
-    margin-top: 2.3em ;
+    margin-top: 2em ;
     width: auto;
     min-height: 50vh;
 }
@@ -32,22 +35,25 @@
 
 .form-item {
     display: flex;
-    margin-top: 30px;
+    margin-top: 3rem;
     min-width: 80vw;
 }
 
 .input-btn {
-    margin-right: 1.2em;
+    margin-right: 1.5em;
 }
 
 .input_range {
     margin-top: 3rem;
-    margin-left: 1rem;
-    min-width: 90vw;
+    min-width: 80vw;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .range-options{
     display :flex;
     justify-content: space-around;
 }
+
+
 

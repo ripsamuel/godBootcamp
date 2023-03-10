@@ -1,8 +1,0 @@
-[ 
-    {
-        "pregunta": "El scope de un variable tipo var es de ",
-        "respuesta": "global",
-        "incorrecta_1" : "bloque",
-        "incorrecta_2": "function"
-    }
-]
