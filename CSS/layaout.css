@@ -20,7 +20,7 @@
 }
 
 .main-content {
-    margin-top: 2em ;
+    margin-top: 2em;
     width: auto;
     min-height: 50vh;
 }
@@ -54,6 +54,11 @@
     display :flex;
     justify-content: space-around;
 }
+fieldset {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  
 
 
 
