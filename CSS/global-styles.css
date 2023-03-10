@@ -29,6 +29,7 @@ form{
 fieldset {
   margin: none;
   border-style: none;
+  margin-top: 6rem;
 }
 
 p {
