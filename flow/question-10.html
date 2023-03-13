@@ -17,17 +17,46 @@
     <header>
         <h1 class="main-title">Titulo</h1>
     </header>
-    
-    <main class="main"> 
-        <h2 class="main-subtitle">Pregunta 1</h2>
-            
-            <ul class="content-list">    
-                <li class="content-list__item">Respuesta 1 &ensp;&ensp;<span>O</span></li>
-                <li class="content-list__item">Respuesta 2 &ensp;&ensp;<span>O</span></li>
-            </ul>
+
+
+    <main class="main">
+        <form class="form-container" id="form-container">
+        <fieldset>
+            <legend class="main-subtitle">¿El scope de un variable tipo var es de ?</legend>
+            <p class="form-item">
+                <input for="bloque"
+                id="response1"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="1">
+                <label >Bloque</label>
+            </p>
+            <p class="form-item">
+                <input for="global"
+                id="response2"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="2">
+                <label >Global</label>
+            </p>
+            <p class="form-item">
+                <input for="Function"
+                id="response3"
+                class="input-btn"
+                type="radio"
+                name="query1"
+                value="3">
+                <label >Function</label>
+
+            </p>
+        </fieldset>
+        </form>
     </main>
     <footer class="footer">
         <a href="./question-11.html">Next </a>
     </footer>
+
 </body>
 </html>

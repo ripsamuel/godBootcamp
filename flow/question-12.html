@@ -17,17 +17,37 @@
     <header>
         <h1 class="main-title">Titulo</h1>
     </header>
-    
-    <main class="main"> 
-        <h2 class="main-subtitle">Pregunta 1</h2>
-            
-            <ul class="content-list">    
-                <li class="content-list__item">Respuesta 1 &ensp;&ensp;<span>O</span></li>
-                <li class="content-list__item">Respuesta 2 &ensp;&ensp;<span>O</span></li>
-            </ul>
+    <main class="main">
+    <form class="form-container">
+        <fieldset>
+            <legend class="main-subtitle"> ¿Qué método debo utilizar para eliminar el último elemento de un array?</legend>
+        
+        <p class="form-item">
+            <input id="input_range"
+            class="input_range"
+            type="range"
+            name="btn1"
+            min="1"
+            max="3"
+            step="1"
+            >
+            <p class="range-options">
+                <label id="label_rta1">.shift()</label>
+                <label>.pop()</label>
+                <label>.filter()</label>
+            </p>
+        </p>
+     </fieldset>
+
+     </form>
+
     </main>
     <footer class="footer">
         <a href="./result.html">Next </a>
     </footer>
+
+    <script src="./index.js">console.log('todo bem')</script>
+
 </body>
+
 </html>

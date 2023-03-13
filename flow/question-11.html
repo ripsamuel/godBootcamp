@@ -17,14 +17,41 @@
     <header>
         <h1 class="main-title">Titulo</h1>
     </header>
-    
-    <main class="main"> 
-        <h2 class="main-subtitle">Pregunta 1</h2>
-            
-            <ul class="content-list">    
-                <li class="content-list__item">Respuesta 1 &ensp;&ensp;<span>O</span></li>
-                <li class="content-list__item">Respuesta 2 &ensp;&ensp;<span>O</span></li>
-            </ul>
+
+    <main class="main">
+        <form class="form-container">
+            <fieldset>
+            <legend class="main-subtitle"> ¿Qué hace el método `forEach()` ?</legend>
+            <p class="form-item">
+                <input for="response1"
+                id="response1"
+                class="input-btn"
+                type="checkbox"
+                name="query1"
+                value="1">
+                <label >Retorna 'true'o 'false' si hay elementos en un array que cumplan con la condición indicada. </label>
+            </p>
+            <p class="form-item">
+                <input for="response2"
+                id="response2"
+                class="input-btn"
+                type="checkbox"
+                name="query2"
+                value="2">
+                <label >Ejecuta la función indicada una vez por cada elemento del array. </label>
+            </p>
+            <p class="form-item">
+                <input for="response3"
+                id="response3"
+                class="input-btn"
+                type="checkbox"
+                name="query3"
+                value="1">
+                <label >Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array. </label>
+            </p>
+            </fieldset>
+        </form>
+
     </main>
     <footer class="footer">
         <a href="./question-12.html">Next </a>
