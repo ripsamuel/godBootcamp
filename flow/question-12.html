@@ -21,15 +21,17 @@
     <form class="form-container">
         <fieldset>
             <legend class="main-subtitle"> ¿Qué método debo utilizar para eliminar el último elemento de un array?</legend>
-        
+
         <p class="form-item">
             <input id="input_range"
+            for="response-range"
             class="input_range"
             type="range"
             name="btn1"
             min="1"
             max="3"
             step="1"
+            onchange="guardar()"
             >
             <p class="range-options">
                 <label id="label_rta1">.shift()</label>
@@ -43,10 +45,66 @@
 
     </main>
     <footer class="footer">
-        <a href="./result.html">Next </a>
+        <a id="trigger" type="button" onclick="guardar()" >Next </a>
     </footer>
 
-    <script src="./index.js">console.log('todo bem')</script>
+    <script type="text/javascript">
+        const range = document.querySelector('#input_range')
+
+function guardar () {
+    range.addEventListener('change' ,rta);
+    function rta(e){
+        rta3 = e.target.value;
+        if (rta3 === "1") {
+        rta3 = ".shift()"
+        }else if(rta3 === "2") {
+            rta3 = ".pop()"
+        }else if (rta3 === "3") {
+            rta3 = ".filter()"
+        }
+        console.log(rta3);
+    }
+    trigger.addEventListener('click', e  => {
+    sessionStorage.setItem('dato3' , rta3);
+    window.location.href="./result.html";
+    });
+    }
+
+
+
+
+
+    //     range.onchange = () => {
+    //     var rta3 = range.value;
+
+    //     if (range.value === "1") {
+    //         rta3 = ".shift()"
+    //     }else if(range.value === "2") {
+    //         rta3 = ".pop()"
+    //     }else if (range.value === "3") {
+    //         rta3 = ".filter()"
+    //     }
+
+    //     console.log(range.value)
+    //     console.log(rta3)
+    //   }
+
+
+    // console.log(range.value)
+
+    // const dato3 = sessionStorage.getItem('dato3');
+    // console.log(dato3);
+
+    // function guardar () {
+    //     trigger.addEventListener('click', e  => {
+
+    //     sessionStorage.setItem('dato3' , rta3);
+    //     window.location.href="./question-12.html";
+    //     });
+    // }
+
+
+    </script>
 
 </body>
 

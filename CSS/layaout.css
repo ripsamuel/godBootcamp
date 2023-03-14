@@ -30,6 +30,9 @@
     justify-content: center;
     align-items: center;
 }
+a {
+    text-decoration: underline;
+}
 
 /* FORM CSS */
 
@@ -57,8 +60,22 @@
 fieldset {
     padding: 0rem;
     margin: 0rem;
-  }
-  
+    border-style: none;
+}
+/* 
+button {
+    background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  /* font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input
+  -webkit-user-select: none; /* for button
+      -moz-user-select: none;
+      -ms-user-select: none;
+}
 
-
-
+ */

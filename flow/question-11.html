@@ -28,7 +28,7 @@
                 class="input-btn"
                 type="checkbox"
                 name="query1"
-                value="1">
+                value="Retorna 'true'o 'false' si hay elementos en un array que cumplan con la condición indicada">
                 <label >Retorna 'true'o 'false' si hay elementos en un array que cumplan con la condición indicada. </label>
             </p>
             <p class="form-item">
@@ -37,7 +37,7 @@
                 class="input-btn"
                 type="checkbox"
                 name="query2"
-                value="2">
+                value="Ejecuta la función indicada una vez por cada elemento del array">
                 <label >Ejecuta la función indicada una vez por cada elemento del array. </label>
             </p>
             <p class="form-item">
@@ -46,7 +46,7 @@
                 class="input-btn"
                 type="checkbox"
                 name="query3"
-                value="1">
+                value="Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array">
                 <label >Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array. </label>
             </p>
             </fieldset>
@@ -54,7 +54,32 @@
 
     </main>
     <footer class="footer">
-        <a href="./question-12.html">Next </a>
+        <a id="trigger" type="button" onclick="guardar()" >Next </a>
     </footer>
+
+    <script type="text/javascript">
+        //guardo el valor obtenido con el evento en dato
+        const dato = sessionStorage.getItem('dato2');
+
+        console.log(dato);
+
+        function guardar () {
+        trigger.addEventListener('click', e  => {
+
+           if (document.getElementById('response1').checked){
+            sessionStorage.setItem('dato2' , response1.value);
+           }
+           if (document.getElementById('response2').checked){
+            sessionStorage.setItem('dato2' , response2.value);
+           }
+           if (document.getElementById('response3').checked){
+            sessionStorage.setItem('dato2' , response3.value);
+           }
+           window.location.href="./question-12.html";
+        });
+    }
+
+    </script>
+
 </body>
 </html>

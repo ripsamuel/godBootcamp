@@ -23,8 +23,14 @@
             </ul>
     </main>
     <footer class="footer">
-        <a class="footer-anchor" href="../index.html">Empezar de nuevo </a>
-        <a class="footer-anchor" href="./">Terminar </a>
+        <a class="footer-anchor" onclick="limpiar()" href="../index.html">Empezar de nuevo </a>
+        <a class="footer-anchor" onclick="limpiar()" href="./">Terminar </a>
     </footer>
+
+    <script type="text/javascript ">
+        function limpiar (){
+            sessionStorage.clear();
+        }
+</script>
 </body>
 </html>

@@ -29,7 +29,7 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="1">
+                value="Bloque">
                 <label >Bloque</label>
             </p>
             <p class="form-item">
@@ -38,7 +38,7 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="2">
+                value="Global">
                 <label >Global</label>
             </p>
             <p class="form-item">
@@ -47,16 +47,40 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="3">
+                value="Function">
                 <label >Function</label>
-
             </p>
+
         </fieldset>
         </form>
     </main>
     <footer class="footer">
-        <a href="./question-11.html">Next </a>
+        <a id="trigger" type="button" onclick="guardar()" >Next </a>
     </footer>
+
+    <script type="text/javascript">
+        //guardo el valor obtenido con el evento en dato
+        const dato = sessionStorage.getItem('dato1');
+
+        console.log(dato);
+
+        function guardar () {
+        trigger.addEventListener('click', e  => {
+
+           if (document.getElementById('response1').checked){
+            sessionStorage.setItem('dato1' , response1.value);
+           }
+           if (document.getElementById('response2').checked){
+            sessionStorage.setItem('dato1' , response2.value);
+           }
+           if (document.getElementById('response3').checked){
+            sessionStorage.setItem('dato1' , response3.value);
+           }
+           window.location.href="./question-11.html";
+        });
+    }
+
+    </script>
 
 </body>
 </html>
