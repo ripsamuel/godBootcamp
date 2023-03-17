@@ -1,1 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@font-face {
+    font-family: Noto-Serif;
+    src: url(../assets/typography/NotoSerif-Bold.ttf);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../assets/typography/);
+}

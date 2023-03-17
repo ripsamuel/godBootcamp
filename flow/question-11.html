@@ -21,33 +21,33 @@
     <main class="main">
         <form class="form-container">
             <fieldset>
-            <legend class="main-subtitle"> ¿Qué hace el método `forEach()` ?</legend>
+            <legend class="main-subtitle"> ¿ What does the `forEach()` method do?</legend>
             <p class="form-item">
-                <input for="response1"
+                <input
                 id="response1"
                 class="input-btn"
                 type="checkbox"
                 name="query1"
-                value="Retorna 'true'o 'false' si hay elementos en un array que cumplan con la condición indicada">
-                <label >Retorna 'true'o 'false' si hay elementos en un array que cumplan con la condición indicada. </label>
+                value="1">
+                <label id="label_response1" for="response1" >Returns 'true' or 'false' if there are elements in an array that meet the specified condition. </label>
             </p>
             <p class="form-item">
-                <input for="response2"
+                <input
                 id="response2"
                 class="input-btn"
                 type="checkbox"
                 name="query2"
-                value="Ejecuta la función indicada una vez por cada elemento del array">
-                <label >Ejecuta la función indicada una vez por cada elemento del array. </label>
+                value="2">
+                <label id="label_response2"for="response2">Executes the indicated function once for each element of the array. </label>
             </p>
             <p class="form-item">
-                <input for="response3"
+                <input
                 id="response3"
                 class="input-btn"
                 type="checkbox"
                 name="query3"
-                value="Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array">
-                <label >Retorna el primer elemento de un array que cumple con una condición definida en un nuevo array. </label>
+                value="3">
+                <label id="label_response3" for="response3"> Returns the first element of an array that meets a condition defined in a new array.</label>
             </p>
             </fieldset>
         </form>
@@ -58,24 +58,37 @@
     </footer>
 
     <script type="text/javascript">
+        let labelresponse1 = document.getElementById('label_response1');
+        let labelresponse2 = document.getElementById('label_response2');
+        let labelresponse3 = document.getElementById('label_response3');
+
         //guardo el valor obtenido con el evento en dato
         const dato = sessionStorage.getItem('dato2');
-
-        console.log(dato);
+         console.log(dato);
 
         function guardar () {
         trigger.addEventListener('click', e  => {
 
-           if (document.getElementById('response1').checked){
-            sessionStorage.setItem('dato2' , response1.value);
-           }
+            if (document.getElementById('response1').checked){
+                if(response1.value ==='1'){
+                    response1.value = labelresponse1.textContent;
+                    sessionStorage.setItem('dato2' , response1.value);
+                }
+            }
            if (document.getElementById('response2').checked){
-            sessionStorage.setItem('dato2' , response2.value);
-           }
-           if (document.getElementById('response3').checked){
-            sessionStorage.setItem('dato2' , response3.value);
-           }
-           window.location.href="./question-12.html";
+                if(response2.value ==='2'){
+                response2.value = labelresponse2.textContent;
+                sessionStorage.setItem('dato2' , response2.value);
+                }
+            }
+            if (document.getElementById('response3').checked){
+                if(response3.value ==='3'){
+                response3.value = labelresponse3.textContent;
+                sessionStorage.setItem('dato2' , response3.value);
+                }
+            }
+
+          window.location.href="./question-12.html";
         });
     }
 

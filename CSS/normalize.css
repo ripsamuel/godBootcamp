@@ -1,5 +1,17 @@
 
- html {
+a {
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+  padding: 0rem;
+}
+fieldset {
+  padding: 0rem;
+  margin: 0rem;
+  border-style: none;
+}
+html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
   }
@@ -45,6 +57,7 @@
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
   
+
   abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */

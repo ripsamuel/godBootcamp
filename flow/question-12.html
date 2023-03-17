@@ -20,27 +20,26 @@
     <main class="main">
     <form class="form-container">
         <fieldset>
-            <legend class="main-subtitle"> ¿Qué método debo utilizar para eliminar el último elemento de un array?</legend>
+            <legend class="main-subtitle"> What method should I use to remove the last element from an array?</legend>
 
         <p class="form-item">
             <input id="input_range"
-            for="response-range"
+
             class="input_range"
             type="range"
             name="btn1"
             min="1"
             max="3"
             step="1"
-            onchange="guardar()"
+            onchange="guardar(this.value)"
             >
             <p class="range-options">
-                <label id="label_rta1">.shift()</label>
-                <label>.pop()</label>
-                <label>.filter()</label>
+                <label for="input_range">.shift()</label>
+                <label for="input-range">.pop()</label>
+                <label for="input-range">.filter()</label>
             </p>
         </p>
      </fieldset>
-
      </form>
 
     </main>
@@ -51,61 +50,22 @@
     <script type="text/javascript">
         const range = document.querySelector('#input_range')
 
-function guardar () {
-    range.addEventListener('change' ,rta);
-    function rta(e){
-        rta3 = e.target.value;
-        if (rta3 === "1") {
-        rta3 = ".shift()"
-        }else if(rta3 === "2") {
-            rta3 = ".pop()"
-        }else if (rta3 === "3") {
-            rta3 = ".filter()"
+        function guardar(val) {
+            if(val==='1'){
+                val = '.shift()'
+            }else if (val === '2'){
+                val = '.pop()'
+            }else if(val ==='3'){
+                val = '.filter()'
+            }
+            if(val != undefined){
+                trigger.addEventListener('click', e  => {
+                    sessionStorage.setItem('dato3' , val);
+                    window.location.href="./result.html";
+            });
+            }
         }
-        console.log(rta3);
-    }
-    trigger.addEventListener('click', e  => {
-    sessionStorage.setItem('dato3' , rta3);
-    window.location.href="./result.html";
-    });
-    }
-
-
-
-
-
-    //     range.onchange = () => {
-    //     var rta3 = range.value;
-
-    //     if (range.value === "1") {
-    //         rta3 = ".shift()"
-    //     }else if(range.value === "2") {
-    //         rta3 = ".pop()"
-    //     }else if (range.value === "3") {
-    //         rta3 = ".filter()"
-    //     }
-
-    //     console.log(range.value)
-    //     console.log(rta3)
-    //   }
-
-
-    // console.log(range.value)
-
-    // const dato3 = sessionStorage.getItem('dato3');
-    // console.log(dato3);
-
-    // function guardar () {
-    //     trigger.addEventListener('click', e  => {
-
-    //     sessionStorage.setItem('dato3' , rta3);
-    //     window.location.href="./question-12.html";
-    //     });
-    // }
-
-
     </script>
-
 </body>
 
 </html>

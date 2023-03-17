@@ -1,34 +1,31 @@
-* {
-    box-sizing: border-box;
-    background-color: white;
-    font-family: 'Nunito', sans-serif;
+:root {
+  --font-size-parragraph: 1.6rem;
 }
 
 html {
   font-size: 62.5%;
+  font-family: 'Nunito', sans-serif;
+  
 }
 
 .main-title , h1{
   font-family: 'Noto Serif';
   font-size: 3.7rem;
-  font-weight: 700;
-  line-height: 39.6px;
 }
 
 .main-subtitle , h2{
   font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 26.4px;
+  font-weight: 300;
 
 }
 
 form{
-  font-size: 1.7rem;
+  font-size: var(--font-size-parragraph);
 }
 
 p {
-  font-size: 1.6rem;
-  line-height: 110%;
+  font-size: var(--font-size-parragraph);
+  font-weight: 300;
 }
 
 input {
@@ -36,11 +33,6 @@ input {
 }
 
 a {
-  color: black;
-  font-size: 1.6rem;
-  line-height: 1.76rem;
-
-  margin-top: 3rem;
-  margin-right: 3rem;
+  font-size: var(--font-size-parragraph);
   color: black;
 }
