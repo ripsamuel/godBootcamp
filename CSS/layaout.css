@@ -1,64 +1,53 @@
+:root{
+    --correct_answer-color:#D6F1CF;
+    --denied_answer-color:#F8D8D8;
 
+}
 .main {
     min-height: 60vh;
-    margin-left: 3.5em;
-    margin-right: 3.5em;
-    margin-top: 5rem;
-    min-width: 50px;
+    margin: 0rem 3.5rem 3.5rem 3.5rem;
 }
 
 .main-title {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 2em;
+    margin: 7.5rem 0rem 2.5rem ;
+
 }
 
 .main-subtitle {
-    margin-top: 2em;
-    padding: 0rem;
-}
-
-.main-content {
-    margin-top: 2em;
-    width: auto;
-    min-height: 50vh;
+    margin: 0rem 0rem 3.3rem ;
 }
 
 .footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item_result {
+    background-color: var(--denied_answer-color);
+    background-color: var(--correct_answer-color);
+    height: 3rem;
+    padding: 1rem;
+
 }
 
 /* FORM CSS */
 
 .form-item {
     display: flex;
-    margin-top: 3rem;
-    min-width: 80vw;
 }
 
 .input-btn {
-    margin-right: 1.5em;
+    margin-right: 1.5rem;
 }
 
 .input_range {
-    margin-top: 3rem;
-    min-width: 80vw;
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
 }
 
 .range-options{
     display :flex;
     justify-content: space-around;
 }
-fieldset {
-    padding: 0rem;
-    margin: 0rem;
-  }
-  
-
-
-

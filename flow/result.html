@@ -19,12 +19,33 @@
     </header>
     <main class="main">
             <ul class="content-list">
-
+                <li><p id="item_result1" class="item_result">    </p></li>
+                <li><p id="item_result2" class="item_result">     </p></li>
+                <li><p id="item_result3" class="item_result">     </p></li>
             </ul>
     </main>
     <footer class="footer">
-        <a class="footer-anchor" href="../index.html">Empezar de nuevo </a>
-        <a class="footer-anchor" href="./">Terminar </a>
+        <a class="footer-anchor" onclick="limpiar()" href="../index.html">Empezar de nuevo </a>
+        <a class="footer-anchor" onclick="limpiar()" href="./">Terminar </a>
     </footer>
+
+
+
+    <script type="text/javascript ">
+
+    let item_result1 = document.getElementById ('item_result1');
+    let item_result2 = document.getElementById ('item_result2');
+    let item_result3 = document.getElementById ('item_result3');
+
+    item_result1.innerText = sessionStorage.dato1;
+    item_result2.innerText = sessionStorage.dato2;
+    item_result3.innerText = sessionStorage.dato3;
+
+
+        function limpiar (){
+            sessionStorage.clear();
+        }
+
+</script>
 </body>
 </html>

@@ -11,52 +11,86 @@
     <link rel="stylesheet" href="../CSS/global-styles.css">
     <link rel="stylesheet" href="../CSS/layaout.css">
 
-    <title>Question 10</title>
+    <title>Question 1</title>
 </head>
 <body>
     <header>
         <h1 class="main-title">Titulo</h1>
     </header>
 
-
     <main class="main">
         <form class="form-container" id="form-container">
         <fieldset>
-            <legend class="main-subtitle">¿El scope de un variable tipo var es de ?</legend>
+            <legend class="main-subtitle">¿The scope of a variable type var is ?</legend>
             <p class="form-item">
-                <input for="bloque"
+                <input
                 id="response1"
                 class="input-btn"
                 type="radio"
                 name="query1"
                 value="1">
-                <label >Bloque</label>
+                <label id="label_response1" for="response1">Block</label>
             </p>
             <p class="form-item">
-                <input for="global"
+                <input
                 id="response2"
                 class="input-btn"
                 type="radio"
                 name="query1"
                 value="2">
-                <label >Global</label>
+                <label id="label_response2" for="response2" >Global</label>
             </p>
             <p class="form-item">
-                <input for="Function"
+                <input
                 id="response3"
                 class="input-btn"
                 type="radio"
                 name="query1"
                 value="3">
-                <label >Function</label>
-
+                <label id="label_response3" for="response3" >Function</label>
             </p>
+
         </fieldset>
         </form>
     </main>
     <footer class="footer">
-        <a href="./question-11.html">Next </a>
+        <a id="trigger" type="button" onclick="guardar()" >Next </a>
     </footer>
+    <script type="text/javascript">
+        let labelresponse1 = document.getElementById('label_response1');
+        let labelresponse2 = document.getElementById('label_response2');
+        let labelresponse3 = document.getElementById('label_response3');
+
+        //guardo el valor obtenido con el evento en dato
+        const dato = sessionStorage.getItem('dato1');
+
+        console.log(dato);
+
+        function guardar () {
+        trigger.addEventListener('click', e  => {
+
+            if (document.getElementById('response1').checked){
+                if(response1.value ==='1'){
+                    response1.value = labelresponse1.textContent;
+                    sessionStorage.setItem('dato1' , response1.value);
+                }
+            }
+           if (document.getElementById('response2').checked){
+                if(response2.value ==='2'){
+                response2.value = labelresponse2.textContent;
+                sessionStorage.setItem('dato1' , response2.value);
+                }
+            }
+            if (document.getElementById('response3').checked){
+                if(response3.value ==='3'){
+                response3.value = labelresponse3.textContent;
+                sessionStorage.setItem('dato1' , response3.value);
+                }
+            }
+          window.location.href="./question-11.html";
+        });
+    }
+    </script>
 
 </body>
 </html>
