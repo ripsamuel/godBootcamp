@@ -28,7 +28,8 @@
                 class="input-btn"
                 type="checkbox"
                 name="query1"
-                value="1">
+                value="1"
+                />
                 <label id="label_response1" for="response1" >Returns 'true' or 'false' if there are elements in an array that meet the specified condition. </label>
             </p>
             <p class="form-item">
@@ -37,7 +38,8 @@
                 class="input-btn"
                 type="checkbox"
                 name="query2"
-                value="2">
+                value="2"
+                />
                 <label id="label_response2"for="response2">Executes the indicated function once for each element of the array. </label>
             </p>
             <p class="form-item">
@@ -46,7 +48,8 @@
                 class="input-btn"
                 type="checkbox"
                 name="query3"
-                value="3">
+                value="3"
+                />
                 <label id="label_response3" for="response3"> Returns the first element of an array that meets a condition defined in a new array.</label>
             </p>
             </fieldset>
@@ -77,6 +80,9 @@
             }
            if (document.getElementById('response2').checked){
                 if(response2.value ==='2'){
+
+                sessionStorage.setItem('correctRTA2' , response2.value);
+
                 response2.value = labelresponse2.textContent;
                 sessionStorage.setItem('dato2' , response2.value);
                 }

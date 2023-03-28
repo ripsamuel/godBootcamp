@@ -41,6 +41,24 @@
     item_result2.innerText = sessionStorage.dato2;
     item_result3.innerText = sessionStorage.dato3;
 
+    // valido una por una si la llave de la respuesta correcta esta guardada 
+    if (sessionStorage.correctRTA1 === '2') {
+        item_result1.classList.add('correctAnswer');
+    }else {
+        item_result1.classList.add('wrongAnswer');
+    }
+    if (sessionStorage.correctRTA2 === '2') {
+        item_result2.classList.add('correctAnswer');
+    }else {
+        item_result2.classList.add('wrongAnswer');
+    }
+    if (sessionStorage.correctRTA3 === '2') {
+        item_result3.classList.add('correctAnswer');
+    }else {
+        item_result3.classList.add('wrongAnswer');
+    }
+    
+    
 
         function limpiar (){
             sessionStorage.clear();

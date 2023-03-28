@@ -26,11 +26,16 @@
 }
 
 .item_result {
-    background-color: var(--denied_answer-color);
-    background-color: var(--correct_answer-color);
     height: 3rem;
-    padding: 1rem;
 
+}
+
+.correctAnswer {
+    background-color: green;
+}
+
+.wrongAnswer {
+    background-color: red;
 }
 
 /* FORM CSS */

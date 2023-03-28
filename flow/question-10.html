@@ -28,7 +28,8 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="1">
+                value="1"
+                />
                 <label id="label_response1" for="response1">Block</label>
             </p>
             <p class="form-item">
@@ -37,7 +38,8 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="2">
+                value="2"
+                />
                 <label id="label_response2" for="response2" >Global</label>
             </p>
             <p class="form-item">
@@ -46,13 +48,19 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="3">
+                value="3"
+                />
                 <label id="label_response3" for="response3" >Function</label>
             </p>
 
         </fieldset>
         </form>
     </main>
+
+
+
+
+
     <footer class="footer">
         <a id="trigger" type="button" onclick="guardar()" >Next </a>
     </footer>
@@ -63,7 +71,6 @@
 
         //guardo el valor obtenido con el evento en dato
         const dato = sessionStorage.getItem('dato1');
-
         console.log(dato);
 
         function guardar () {
@@ -73,10 +80,15 @@
                 if(response1.value ==='1'){
                     response1.value = labelresponse1.textContent;
                     sessionStorage.setItem('dato1' , response1.value);
+                    console.log(response1.value);
                 }
             }
            if (document.getElementById('response2').checked){
                 if(response2.value ==='2'){
+
+            // guardamos el valor de la respuesta correcta para aprovarlo en result.html
+                sessionStorage.setItem('correctRTA1' , response2.value);
+
                 response2.value = labelresponse2.textContent;
                 sessionStorage.setItem('dato1' , response2.value);
                 }
