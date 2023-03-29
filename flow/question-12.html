@@ -34,9 +34,9 @@
             onchange="guardar(this.value)"
             />
             <p class="range-options">
-                <label for="input_range">.shift()</label>
-                <label for="input-range">.pop()</label>
-                <label for="input-range">.filter()</label>
+                <label id="label_response1" for="input_range"></label>
+                <label id="label_response2" for="input-range"></label>
+                <label id="label_response3" for="input-range"></label>
             </p>
         </p>
      </fieldset>
@@ -48,33 +48,25 @@
 
     <script type="text/javascript">
 
+const labelResponseArray = ['.shift()','.pop()', '.filter()'];
+        document.getElementById('label_response1').innerText = labelResponseArray[0];
+        document.getElementById('label_response2').innerText = labelResponseArray[1];
+        document.getElementById('label_response3').innerText = labelResponseArray[2];
 
-document.getElementById('form-container').addEventListener('submit', function (event){
+    document.getElementById('form-container').addEventListener('submit', function (event){
         event.preventDefault();
-        sessionStorage.setItem('dato3' , event.target.query3.value);
-        window.location.href = '/flow/result.html'
-    })
+        let dato = event.target.query3.value;
+        if(dato === '2') {
+            sessionStorage.setItem('correctAnswer3' , dato);
+            }
+        dato--;
+        function labelResponse(){
+            sessionStorage.setItem('dato3' , labelResponseArray[dato]);
+          window.location.href="./result.html";
+            }
+            labelResponse();
+            })
 
-
-
-        // const range = document.querySelector('#input_range')
-
-        // function guardar(val) {
-        //     if(val==='1'){
-        //         val = '.shift()'
-        //     }else if (val === '2'){
-        //     sessionStorage.setItem('correctRTA3' , '2');
-        //         val = '.pop()'
-        //     }else if(val ==='3'){
-        //         val = '.filter()'
-        //     }
-        //     if(val != undefined){
-        //         trigger.addEventListener('click', e  => {
-        //             sessionStorage.setItem('dato3' , val);
-        //             window.location.href="./result.html";
-        //     });
-        //     }
-        // }
     </script>
 </body>
 
