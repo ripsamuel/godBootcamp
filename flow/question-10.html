@@ -30,7 +30,7 @@
                 name="query1"
                 value="1"
                 />
-                <label id="label_response1" for="response1">Block</label>
+                <label for="response1">Block</label>
             </p>
             <p class="form-item">
                 <input
@@ -40,7 +40,7 @@
                 name="query1"
                 value="2"
                 />
-                <label id="label_response2" for="response2" >Global</label>
+                <label for="response2" >Global</label>
             </p>
             <p class="form-item">
                 <input
@@ -50,58 +50,57 @@
                 name="query1"
                 value="3"
                 />
-                <label id="label_response3" for="response3" >Function</label>
+                <label for="response3" >Function</label>
             </p>
 
         </fieldset>
+        <input id="trigger" type="submit"  />
         </form>
     </main>
 
-
-
-
-
-    <footer class="footer">
-        <a id="trigger" type="button" onclick="guardar()" >Next </a>
-    </footer>
     <script type="text/javascript">
-        let labelresponse1 = document.getElementById('label_response1');
-        let labelresponse2 = document.getElementById('label_response2');
-        let labelresponse3 = document.getElementById('label_response3');
+        const labelResponseArray = ['Block','Global', 'Function'];
 
-        //guardo el valor obtenido con el evento en dato
-        const dato = sessionStorage.getItem('dato1');
-        console.log(dato);
-
-        function guardar () {
-        trigger.addEventListener('click', e  => {
-
-            if (document.getElementById('response1').checked){
-                if(response1.value ==='1'){
-                    response1.value = labelresponse1.textContent;
-                    sessionStorage.setItem('dato1' , response1.value);
-                    console.log(response1.value);
-                }
+    document.getElementById('form-container').addEventListener('submit', function (event){
+        event.preventDefault();
+        let dato = event.target.query1.value -1;
+        function labelResponse(){
+            sessionStorage.setItem('dato1' , labelResponseArray[dato]);
             }
-           if (document.getElementById('response2').checked){
-                if(response2.value ==='2'){
+            labelResponse();
+            })
 
-            // guardamos el valor de la respuesta correcta para aprovarlo en result.html
-                sessionStorage.setItem('correctRTA1' , response2.value);
 
-                response2.value = labelresponse2.textContent;
-                sessionStorage.setItem('dato1' , response2.value);
-                }
-            }
-            if (document.getElementById('response3').checked){
-                if(response3.value ==='3'){
-                response3.value = labelresponse3.textContent;
-                sessionStorage.setItem('dato1' , response3.value);
-                }
-            }
-          window.location.href="./question-11.html";
-        });
-    }
+
+        // function guardar () {
+        // trigger.addEventListener('click', e  => {
+
+        //     if (document.getElementById('response1').checked){
+        //         if(response1.value ==='1'){
+        //             response1.value = labelresponse1.textContent;
+        //             sessionStorage.setItem('dato1' , response1.value);
+        //             console.log(response1.value);
+        //         }
+        //     }
+        //    if (document.getElementById('response2').checked){
+        //         if(response2.value ==='2'){
+
+        //     // guardamos el valor de la respuesta correcta para aprovarlo en result.html
+        //         sessionStorage.setItem('correctRTA1' , response2.value);
+
+        //         response2.value = labelresponse2.textContent;
+        //         sessionStorage.setItem('dato1' , response2.value);
+        //         }
+        //     }
+        //     if (document.getElementById('response3').checked){
+        //         if(response3.value ==='3'){
+        //         response3.value = labelresponse3.textContent;
+        //         sessionStorage.setItem('dato1' , response3.value);
+        //         }
+        //     }
+        //   window.location.href="./question-11.html";
+        // });
+    // }
     </script>
 
 </body>

@@ -25,6 +25,24 @@
     justify-content: space-evenly;
 }
 
+input[type="submit"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-decoration: underline;
+  /*  posicion */
+  position: absolute;
+  bottom: 8rem;
+  left: 45vw;
+
+}
+
 .item_result {
     height: 3.5rem;
 

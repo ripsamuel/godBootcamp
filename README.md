@@ -1,9 +1,9 @@
 # godBootcamp
 class notes rulea bootcamp
 
-Logica de los TICKETs VALIDATION QUESTIONS 1, 2 ->
+Logica de los TICKETs VALIDATION QUESTIONS 1, 2 ->   __ VERSION _ 1
 
-Cada pagina de preguntas contiene 3 preguntas cuyas respuestas se encuentran envueltas en un tag <p> que contiene un <input> que es chek de la respuesta seleccionada y un <label> con el contenido de la respuesta, cada una con un ID en orden ascendente
+Cada pagina de preguntas contiene 3 respuestas cuyas respuestas se encuentran envueltas en un tag <p> que contiene un <input> que es chek de la respuesta seleccionada y un <label> con el contenido de la respuesta, cada una con un ID en orden ascendente
 
 Desde JS se seleccionan los 3 pares de <input> y <label> y se almacenan en variables **
 

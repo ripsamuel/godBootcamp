@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../CSS/global-styles.css">
     <link rel="stylesheet" href="../CSS/layaout.css">
 
-    <title>Question 11</title>
+    <title>Question 2</title>
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
     </header>
 
     <main class="main">
-        <form class="form-container">
+        <form class="form-container" id="form-container">
             <fieldset>
             <legend class="main-subtitle"> ¿ What does the `forEach()` method do?</legend>
             <p class="form-item">
@@ -27,7 +27,7 @@
                 id="response1"
                 class="input-btn"
                 type="checkbox"
-                name="query1"
+                name="query2"
                 value="1"
                 />
                 <label id="label_response1" for="response1" >Returns 'true' or 'false' if there are elements in an array that meet the specified condition. </label>
@@ -47,56 +47,69 @@
                 id="response3"
                 class="input-btn"
                 type="checkbox"
-                name="query3"
+                name="query2"
                 value="3"
                 />
                 <label id="label_response3" for="response3"> Returns the first element of an array that meets a condition defined in a new array.</label>
             </p>
             </fieldset>
+
+        <input id="trigger" type="submit" />
+
         </form>
 
     </main>
-    <footer class="footer">
-        <a id="trigger" type="button" onclick="guardar()" >Next </a>
-    </footer>
 
     <script type="text/javascript">
-        let labelresponse1 = document.getElementById('label_response1');
-        let labelresponse2 = document.getElementById('label_response2');
-        let labelresponse3 = document.getElementById('label_response3');
 
-        //guardo el valor obtenido con el evento en dato
-        const dato = sessionStorage.getItem('dato2');
-         console.log(dato);
+document.getElementById('form-container').addEventListener('submit', function (event){
+        event.preventDefault();
+        console.log(event.target.query2.value)
+        sessionStorage.setItem('dato2' , event.target.query2.value);
+        // window.location.href = '/flow/question-12.html'
+        console.log(event.target.query2.value)
 
-        function guardar () {
-        trigger.addEventListener('click', e  => {
+    })
 
-            if (document.getElementById('response1').checked){
-                if(response1.value ==='1'){
-                    response1.value = labelresponse1.textContent;
-                    sessionStorage.setItem('dato2' , response1.value);
-                }
-            }
-           if (document.getElementById('response2').checked){
-                if(response2.value ==='2'){
 
-                sessionStorage.setItem('correctRTA2' , response2.value);
 
-                response2.value = labelresponse2.textContent;
-                sessionStorage.setItem('dato2' , response2.value);
-                }
-            }
-            if (document.getElementById('response3').checked){
-                if(response3.value ==='3'){
-                response3.value = labelresponse3.textContent;
-                sessionStorage.setItem('dato2' , response3.value);
-                }
-            }
 
-          window.location.href="./question-12.html";
-        });
-    }
+    //     let labelresponse1 = document.getElementById('label_response1');
+    //     let labelresponse2 = document.getElementById('label_response2');
+    //     let labelresponse3 = document.getElementById('label_response3');
+
+    //     //guardo el valor obtenido con el evento en dato
+    //     const dato = sessionStorage.getItem('dato2');
+    //      console.log(dato);
+
+    //     function guardar () {
+    //     trigger.addEventListener('click', e  => {
+
+    //         if (document.getElementById('response1').checked){
+    //             if(response1.value ==='1'){
+    //                 response1.value = labelresponse1.textContent;
+    //                 sessionStorage.setItem('dato2' , response1.value);
+    //             }
+    //         }
+    //        if (document.getElementById('response2').checked){
+    //             if(response2.value ==='2'){
+
+    //             sessionStorage.setItem('correctRTA2' , response2.value);
+
+    //             response2.value = labelresponse2.textContent;
+    //             sessionStorage.setItem('dato2' , response2.value);
+    //             }
+    //         }
+    //         if (document.getElementById('response3').checked){
+    //             if(response3.value ==='3'){
+    //             response3.value = labelresponse3.textContent;
+    //             sessionStorage.setItem('dato2' , response3.value);
+    //             }
+    //         }
+
+    //       window.location.href="./question-12.html";
+    //     });
+    // }
 
     </script>
 

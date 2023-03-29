@@ -18,7 +18,7 @@
         <h1 class="main-title">Titulo</h1>
     </header>
     <main class="main">
-    <form class="form-container">
+    <form class="form-container" id="form-container">
         <fieldset>
             <legend class="main-subtitle"> What method should I use to remove the last element from an array?</legend>
 
@@ -27,12 +27,12 @@
 
             class="input_range"
             type="range"
-            name="btn1"
+            name="query3"
             min="1"
             max="3"
             step="1"
             onchange="guardar(this.value)"
-            >
+            />
             <p class="range-options">
                 <label for="input_range">.shift()</label>
                 <label for="input-range">.pop()</label>
@@ -40,32 +40,41 @@
             </p>
         </p>
      </fieldset>
+     <input id="trigger" type="submit" value="Next" />
+
      </form>
 
     </main>
-    <footer class="footer">
-        <a id="trigger" type="button" onclick="guardar()" >Next </a>
-    </footer>
 
     <script type="text/javascript">
-        const range = document.querySelector('#input_range')
 
-        function guardar(val) {
-            if(val==='1'){
-                val = '.shift()'
-            }else if (val === '2'){
-            sessionStorage.setItem('correctRTA3' , '2');
-                val = '.pop()'
-            }else if(val ==='3'){
-                val = '.filter()'
-            }
-            if(val != undefined){
-                trigger.addEventListener('click', e  => {
-                    sessionStorage.setItem('dato3' , val);
-                    window.location.href="./result.html";
-            });
-            }
-        }
+
+document.getElementById('form-container').addEventListener('submit', function (event){
+        event.preventDefault();
+        sessionStorage.setItem('dato3' , event.target.query3.value);
+        window.location.href = '/flow/result.html'
+    })
+
+
+
+        // const range = document.querySelector('#input_range')
+
+        // function guardar(val) {
+        //     if(val==='1'){
+        //         val = '.shift()'
+        //     }else if (val === '2'){
+        //     sessionStorage.setItem('correctRTA3' , '2');
+        //         val = '.pop()'
+        //     }else if(val ==='3'){
+        //         val = '.filter()'
+        //     }
+        //     if(val != undefined){
+        //         trigger.addEventListener('click', e  => {
+        //             sessionStorage.setItem('dato3' , val);
+        //             window.location.href="./result.html";
+        //     });
+        //     }
+        // }
     </script>
 </body>
 
