@@ -21,3 +21,20 @@ Para validar las respuestas correctas y mostrarlas en result.html
 Dentro de la funcion guardar() y luego de validar la respuesta correcta enviamos al sessionStorage el valor de la respuesta que sera la "llave" para luego validarla en result.html y agregarle una clase con el color que corresponda
 
 
+Logica version 1 question 11
+        //     console.log(dato);
+        //     console.log(query2);
+
+        // if(dato === '1') {
+        //     sessionStorage.setItem('correctAnswer2' , dato);
+        //     }
+        // dato--;
+        // function labelResponse(){
+        //     sessionStorage.setItem('dato2' , labelResponseArray[dato]);
+        // //   window.location.href="./question-12.html";
+        //     }
+        //     labelResponse();
+        //     })
+
+
+

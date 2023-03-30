@@ -21,7 +21,7 @@
     <main class="main">
         <form class="form-container" id="form-container">
             <fieldset>
-            <legend class="main-subtitle"> ¿ What does the `forEach()` method do?</legend>
+            <legend class="main-subtitle"> ¿ What does the `forEach()` and `.map() ` method do?</legend>
             <p class="form-item">
                 <input
                 id="response1"
@@ -36,7 +36,7 @@
                 <input
                 id="response2"
                 class="input-btn"
-                type="radio"
+                type="checkbox"
                 name="query2"
                 value="2"
                 />
@@ -46,12 +46,13 @@
                 <input
                 id="response3"
                 class="input-btn"
-                type="radio"
+                type="checkbox"
                 name="query2"
                 value="3"
                 />
                 <label id="label_response3" for="response3"> </label>
             </p>
+            <h4 style="color:red" id="error"></h4>   
             </fieldset>
 
         <input id="trigger" type="submit" value = "Next" />
@@ -63,27 +64,73 @@
     <script type="text/javascript">
 
 
-    const labelResponseArray = [ "Executes the indicated function once for each element of the array."
-    ,"Returns 'true' or 'false' if there are elements in an array that meet the specified condition. ','Global', 'Function"
-    , "Returns the first element of an array that meets a condition defined in a new array."];
+        const labelResponseArray = [ "","Executes the indicated function once for each element of the array."
+        ,"Returns the first element of an array that meets a condition defined in a new array."
+        ,"Creates a new array with the results of the indicated function call applied to each of its elements."];
 
-        document.getElementById('label_response1').innerText = labelResponseArray[0];
-        document.getElementById('label_response2').innerText = labelResponseArray[1];
-        document.getElementById('label_response3').innerText = labelResponseArray[2];
+        document.getElementById('label_response1').innerText = labelResponseArray[1];
+        document.getElementById('label_response2').innerText = labelResponseArray[2];
+        document.getElementById('label_response3').innerText = labelResponseArray[3];
+        a = document.getElementById('response1');
+        b = document.getElementById('response2');
+        c = document.getElementById('response3');
 
         document.getElementById('form-container').addEventListener('submit', function (event){
         event.preventDefault();
-        let dato = event.target.query2.value;
-        if(dato === '1') {
-            sessionStorage.setItem('correctAnswer2' , dato);
+
+     function labelResponse(){
+        if(a.checked == true && b.checked == true && c.checked == true){
+            alert("Porfavor elige solo dos preguntas");
+
+        }else{
+
+            if (a.checked == true){
+                var dato1 =  a.value
+                console.log('tengo el dato ' + dato1);
+                sessionStorage.setItem('dato2_1' , labelResponseArray[dato1]);
+
+            }if (b.checked == true){
+                var dato2 =  b.value
+                console.log('tengo el dato ' + dato2);
+                sessionStorage.setItem('dato2_2' , labelResponseArray[dato2]);
+
+            }if (c.checked == true){
+                var dato3 =  c.value
+                console.log('tengo el dato ' + dato3);
+                sessionStorage.setItem('dato2_3' , labelResponseArray[dato3]);
+
             }
-        dato--;
-        function labelResponse(){
-            sessionStorage.setItem('dato2' , labelResponseArray[dato]);
-          window.location.href="./question-12.html";
+
+            if (!!dato1){
+                sessionStorage.setItem('correctAnswer2_1' , dato1);
+                console.log('tengo el sesionstrogae dato ' + dato1);
             }
-            labelResponse();
-            })
+            if (!!dato3){
+                sessionStorage.setItem('correctAnswer2_2' , dato3);
+                console.log('tengo el sesionstrogae dato ' + dato3);
+            }
+            window.location.href="./question-12.html";
+
+        }
+        }labelResponse()
+    })
+
+
+
+
+        //     console.log(dato);
+        //     console.log(query2);
+
+        // if(dato === '1') {
+        //     sessionStorage.setItem('correctAnswer2' , dato);
+        //     }
+        // dato--;
+        // function labelResponse(){
+        //     sessionStorage.setItem('dato2' , labelResponseArray[dato]);
+        // //   window.location.href="./question-12.html";
+        //     }
+        //     labelResponse();
+        //     })
 
     </script>
 

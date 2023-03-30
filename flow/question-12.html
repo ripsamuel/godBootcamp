@@ -31,7 +31,6 @@
             min="1"
             max="3"
             step="1"
-            onchange="guardar(this.value)"
             />
             <p class="range-options">
                 <label id="label_response1" for="input_range"></label>
@@ -56,6 +55,7 @@ const labelResponseArray = ['.shift()','.pop()', '.filter()'];
     document.getElementById('form-container').addEventListener('submit', function (event){
         event.preventDefault();
         let dato = event.target.query3.value;
+        console.log(dato);
         if(dato === '2') {
             sessionStorage.setItem('correctAnswer3' , dato);
             }
