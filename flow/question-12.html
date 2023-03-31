@@ -47,14 +47,14 @@
 
     <script type="text/javascript">
 
-const labelResponseArray = ['.shift()','.pop()', '.filter()'];
+        const labelResponseArray = ['.shift()','.pop()', '.filter()'];
         document.getElementById('label_response1').innerText = labelResponseArray[0];
         document.getElementById('label_response2').innerText = labelResponseArray[1];
         document.getElementById('label_response3').innerText = labelResponseArray[2];
 
     document.getElementById('form-container').addEventListener('submit', function (event){
         event.preventDefault();
-        let dato = event.target.query3.value;
+        var dato = event.target.query3.value;
         console.log(dato);
         if(dato === '2') {
             sessionStorage.setItem('correctAnswer3' , dato);

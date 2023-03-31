@@ -42,6 +42,8 @@ button {
   left: 45vw;
 }
 
+
+
 .item_result {
     height: 3.5rem;
     background-color: var(--denied_answer-color);
