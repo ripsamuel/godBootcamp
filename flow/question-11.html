@@ -63,55 +63,45 @@
     <script type="text/javascript">
 
 
-        const labelResponseArray = [ "","Executes the indicated function once for each element of the array."
+        const labelResponseArray = ["Executes the indicated function once for each element of the array."
         ,"Returns the first element of an array that meets a condition defined in a new array."
         ,"Creates a new array with the results of the indicated function call applied to each of its elements."];
 
-        document.getElementById('label_response1').innerText = labelResponseArray[1];
-        document.getElementById('label_response2').innerText = labelResponseArray[2];
-        document.getElementById('label_response3').innerText = labelResponseArray[3];
-        const a = document.getElementById('response1');
-        const b = document.getElementById('response2');
-        const c = document.getElementById('response3');
+        document.getElementById('label_response1').innerText = labelResponseArray[0];
+        document.getElementById('label_response2').innerText = labelResponseArray[1];
+        document.getElementById('label_response3').innerText = labelResponseArray[2];
 
         document.getElementById('form-container').addEventListener('submit', function (event){
         event.preventDefault();
+        // array con todas las responses
+        const elements = event.target.elements.namedItem('query2');
 
      function labelResponse(){
-        if(a.checked == true && b.checked == true && c.checked == true){
-            alert("Porfavor elige solo dos preguntas hdp");
+        if(elements[0].checked && elements[1].checked && elements[2].checked){
+            alert("Porfavor elige solo dos preguntas ");
 
         }else{
+            if (elements[0].checked){
+                var dato1 = elements[0].value;
+                sessionStorage.setItem('dato2_1' , labelResponseArray[0]);
 
-            if (a.checked == true){
-                var dato1 =  a.value
-                console.log('tengo el dato ' + dato1);
-                sessionStorage.setItem('dato2_1' , labelResponseArray[dato1]);
+            }if (elements[1].checked){
+                sessionStorage.setItem('dato2_2' , labelResponseArray[1]);
 
-            }if (b.checked == true){
-                var dato2 =  b.value
-                console.log('tengo el dato ' + dato2);
-                sessionStorage.setItem('dato2_2' , labelResponseArray[dato2]);
-
-            }if (c.checked == true){
-                var dato3 =  c.value
-                console.log('tengo el dato ' + dato3);
-                sessionStorage.setItem('dato2_3' , labelResponseArray[dato3]);
-
+            }if (elements[2].checked){
+                var dato3 = elements[0].value
+                sessionStorage.setItem('dato2_3' , labelResponseArray[2]);
             }
-
             if (!!dato1){
-                sessionStorage.setItem('correctAnswer2_1' , dato1);
-                console.log('tengo el sesionstrogae dato ' + dato1);
+                sessionStorage.setItem('correctAnswer2_1' , elements[0].value);
             }
             if (!!dato3){
-                sessionStorage.setItem('correctAnswer2_2' , dato3);
-                console.log('tengo el sesionstrogae dato ' + dato3);
+                sessionStorage.setItem('correctAnswer2_2' , elements[2].value);
             }
             window.location.href="./question-12.html";
 
         }
-        }labelResponse()
+        }labelResponse();
     })
     </script>
 
