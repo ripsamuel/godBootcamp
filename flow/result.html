@@ -19,10 +19,12 @@
     </header>
     <main class="main">
             <ul class="content-list">
-                <li><p id="item_result1" class="item_result">    </p></li>
-                <li><p id="item_result2" class="item_result">     </p></li>
-                <li><p id="item_result3" class="item_result">     </p></li>
+                <li><p id="item_result1" class="item_result"> </p></li>
+                <li><p id="item_result2_1" class="item_result"> </p></li>
+                <li><p id="item_result2_2" class="item_result"> </p></li>
+                <li><p id="item_result3" class="item_result">  </p></li>
             </ul>
+            <h2 style=";" id="medal"></h2>   
     </main>
     <footer class="footer">
         <a class="footer-anchor" onclick="limpiar()" href="../index.html">Empezar de nuevo </a>
@@ -32,20 +34,52 @@
 
 
     <script type="text/javascript ">
+        document.getElementById ('item_result1').innerText = sessionStorage.dato1;
+        document.getElementById ('item_result2_2').innerText = sessionStorage.dato2_2;
+        document.getElementById ('item_result3').innerText = sessionStorage.dato3;
 
-    let item_result1 = document.getElementById ('item_result1');
-    let item_result2 = document.getElementById ('item_result2');
-    let item_result3 = document.getElementById ('item_result3');
-
-    item_result1.innerText = sessionStorage.dato1;
-    item_result2.innerText = sessionStorage.dato2;
-    item_result3.innerText = sessionStorage.dato3;
-
-
+        function validationQuestion2() {
+            if(!!sessionStorage.dato2_1 ) {
+                if(!!sessionStorage.dato2_2 ||!!sessionStorage.dato2_3 ){
+                    document.getElementById ('item_result2_1').innerText = sessionStorage.dato2_1;
+                }else{
+                    document.getElementById ('item_result2_1').innerText = sessionStorage.dato2_2;
+                }
+            }
+            if(!!sessionStorage.dato2_2 ) {
+                if(!!sessionStorage.dato2_3){
+                    document.getElementById ('item_result2_1').innerText = sessionStorage.dato2_2;
+                }else{
+                    document.getElementById ('item_result2_2').innerText = sessionStorage.dato2_2;
+                }
+            }
+            if(!!sessionStorage.dato2_3 ) {
+                document.getElementById ('item_result2_2').innerText = sessionStorage.dato2_3;
+            }
+        }validationQuestion2();
+        // valido una por una si la llave de la respuesta correcta esta guardada
+        function classColor(){
+            if (sessionStorage.correctAnswer1 === '2') {
+                item_result1.classList.add('correctAnswer');
+            }
+            if (sessionStorage.correctAnswer2_1 === '1') {
+                item_result2_1.classList.add('correctAnswer');
+            }
+            if (sessionStorage.correctAnswer2_2 === '3') {
+                item_result2_2.classList.add('correctAnswer');
+            }
+            if (sessionStorage.correctAnswer3 === '2') {
+                item_result3.classList.add('correctAnswer');
+                console.log('banderita');
+            }
+            if(sessionStorage.correctAnswer2_1 === '1' && sessionStorage.correctAnswer2_2 === '3'){
+                document.getElementById('medal').innerText = '🥇';
+            }
+        }classColor();
         function limpiar (){
             sessionStorage.clear();
         }
 
-</script>
+    </script>
 </body>
 </html>

@@ -28,7 +28,8 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="1">
+                value="1"
+                />
                 <label id="label_response1" for="response1">Block</label>
             </p>
             <p class="form-item">
@@ -37,7 +38,8 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="2">
+                value="2"
+                />
                 <label id="label_response2" for="response2" >Global</label>
             </p>
             <p class="form-item">
@@ -46,50 +48,37 @@
                 class="input-btn"
                 type="radio"
                 name="query1"
-                value="3">
+                value="3"
+                />
                 <label id="label_response3" for="response3" >Function</label>
             </p>
 
         </fieldset>
+        <input id="trigger" type="submit" value="Next"  />
         </form>
     </main>
-    <footer class="footer">
-        <a id="trigger" type="button" onclick="guardar()" >Next </a>
-    </footer>
+
     <script type="text/javascript">
-        let labelresponse1 = document.getElementById('label_response1');
-        let labelresponse2 = document.getElementById('label_response2');
-        let labelresponse3 = document.getElementById('label_response3');
 
-        //guardo el valor obtenido con el evento en dato
-        const dato = sessionStorage.getItem('dato1');
+const labelResponseArray = ['Block','Global', 'Function'];
+        document.getElementById('label_response1').innerText = labelResponseArray[0];
+        document.getElementById('label_response2').innerText = labelResponseArray[1];
+        document.getElementById('label_response3').innerText = labelResponseArray[2];
 
-        console.log(dato);
-
-        function guardar () {
-        trigger.addEventListener('click', e  => {
-
-            if (document.getElementById('response1').checked){
-                if(response1.value ==='1'){
-                    response1.value = labelresponse1.textContent;
-                    sessionStorage.setItem('dato1' , response1.value);
-                }
+    document.getElementById('form-container').addEventListener('submit', function (event){
+        event.preventDefault();
+        var dato = event.target.query1.value;
+        if(dato === '2') {
+            sessionStorage.setItem('correctAnswer1' , dato);
             }
-           if (document.getElementById('response2').checked){
-                if(response2.value ==='2'){
-                response2.value = labelresponse2.textContent;
-                sessionStorage.setItem('dato1' , response2.value);
-                }
-            }
-            if (document.getElementById('response3').checked){
-                if(response3.value ==='3'){
-                response3.value = labelresponse3.textContent;
-                sessionStorage.setItem('dato1' , response3.value);
-                }
-            }
+        dato--;
+        function labelResponse(){
+            sessionStorage.setItem('dato1' , labelResponseArray[dato]);
           window.location.href="./question-11.html";
-        });
-    }
+            }
+            labelResponse();
+            })
+
     </script>
 
 </body>

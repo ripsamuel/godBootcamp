@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../CSS/global-styles.css">
     <link rel="stylesheet" href="../CSS/layaout.css">
 
-    <title>Question 11</title>
+    <title>Question 2</title>
 </head>
 <body>
     <header>
@@ -19,17 +19,18 @@
     </header>
 
     <main class="main">
-        <form class="form-container">
+        <form class="form-container" id="form-container">
             <fieldset>
-            <legend class="main-subtitle"> ¿ What does the `forEach()` method do?</legend>
+            <legend class="main-subtitle"> ¿ What does the `forEach()` and `.map() ` method do?</legend>
             <p class="form-item">
                 <input
                 id="response1"
                 class="input-btn"
                 type="checkbox"
-                name="query1"
-                value="1">
-                <label id="label_response1" for="response1" >Returns 'true' or 'false' if there are elements in an array that meet the specified condition. </label>
+                name="query2"
+                value="1"
+                />
+                <label id="label_response1" for="response1" ></label>
             </p>
             <p class="form-item">
                 <input
@@ -37,61 +38,71 @@
                 class="input-btn"
                 type="checkbox"
                 name="query2"
-                value="2">
-                <label id="label_response2"for="response2">Executes the indicated function once for each element of the array. </label>
+                value="2"
+                />
+                <label id="label_response2"for="response2"> </label>
             </p>
             <p class="form-item">
                 <input
                 id="response3"
                 class="input-btn"
                 type="checkbox"
-                name="query3"
-                value="3">
-                <label id="label_response3" for="response3"> Returns the first element of an array that meets a condition defined in a new array.</label>
+                name="query2"
+                value="3"
+                />
+                <label id="label_response3" for="response3"> </label>
             </p>
             </fieldset>
+
+        <input id="trigger" type="submit" value = "Next" />
+
         </form>
 
     </main>
-    <footer class="footer">
-        <a id="trigger" type="button" onclick="guardar()" >Next </a>
-    </footer>
 
     <script type="text/javascript">
-        let labelresponse1 = document.getElementById('label_response1');
-        let labelresponse2 = document.getElementById('label_response2');
-        let labelresponse3 = document.getElementById('label_response3');
 
-        //guardo el valor obtenido con el evento en dato
-        const dato = sessionStorage.getItem('dato2');
-         console.log(dato);
 
-        function guardar () {
-        trigger.addEventListener('click', e  => {
+        const labelResponseArray = ["Executes the indicated function once for each element of the array."
+        ,"Returns the first element of an array that meets a condition defined in a new array."
+        ,"Creates a new array with the results of the indicated function call applied to each of its elements."];
 
-            if (document.getElementById('response1').checked){
-                if(response1.value ==='1'){
-                    response1.value = labelresponse1.textContent;
-                    sessionStorage.setItem('dato2' , response1.value);
-                }
+        document.getElementById('label_response1').innerText = labelResponseArray[0];
+        document.getElementById('label_response2').innerText = labelResponseArray[1];
+        document.getElementById('label_response3').innerText = labelResponseArray[2];
+
+        document.getElementById('form-container').addEventListener('submit', function (event){
+        event.preventDefault();
+        // array con todas las responses
+        const elements = event.target.elements.namedItem('query2');
+
+     function labelResponse(){
+        if(elements[0].checked && elements[1].checked && elements[2].checked){
+            alert("Porfavor elige solo dos preguntas ");
+
+        }else{
+            if (elements[0].checked){
+                var dato1 = elements[0].value;
+                sessionStorage.setItem('dato2_1' , labelResponseArray[0]);
+
+            }if (elements[1].checked){
+                sessionStorage.setItem('dato2_2' , labelResponseArray[1]);
+
+            }if (elements[2].checked){
+                var dato3 = elements[0].value
+                sessionStorage.setItem('dato2_3' , labelResponseArray[2]);
             }
-           if (document.getElementById('response2').checked){
-                if(response2.value ==='2'){
-                response2.value = labelresponse2.textContent;
-                sessionStorage.setItem('dato2' , response2.value);
-                }
+            if (!!dato1){
+                sessionStorage.setItem('correctAnswer2_1' , elements[0].value);
             }
-            if (document.getElementById('response3').checked){
-                if(response3.value ==='3'){
-                response3.value = labelresponse3.textContent;
-                sessionStorage.setItem('dato2' , response3.value);
-                }
+            if (!!dato3){
+                sessionStorage.setItem('correctAnswer2_2' , elements[2].value);
             }
+            window.location.href="./question-12.html";
 
-          window.location.href="./question-12.html";
-        });
-    }
-
+        }
+        }labelResponse();
+    })
     </script>
 
 </body>

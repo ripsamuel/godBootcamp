@@ -25,16 +25,35 @@
     justify-content: space-evenly;
 }
 
-.item_result {
-    background-color: var(--denied_answer-color);
-    background-color: var(--correct_answer-color);
-    height: 3rem;
-    padding: 1rem;
+input[type="submit"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  text-decoration: underline;
+  /*  posicion */
+  position: absolute;
+  bottom: 8rem;
+  left: 45vw;
+}
 
+
+
+.item_result {
+    height: 3.5rem;
+    background-color: var(--denied_answer-color);
+}
+
+.correctAnswer {
+    background-color: var(--correct_answer-color);
 }
 
 /* FORM CSS */
-
 .form-item {
     display: flex;
 }
